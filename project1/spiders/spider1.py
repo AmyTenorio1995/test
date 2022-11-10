@@ -22,15 +22,15 @@ def get_new_proxyv6():
         proxy_data = get_current_proxyv6()
         #proxy_ip_v6 = str(proxy_data['data']['host']) + ':' + str(proxy_data['data']['port'])
         #return proxy_ip_v6
-        proxy_ip = str(proxy_data['data']['host'])
-        proxy_port = str(proxy_data['data']['port'])
+        proxy_ip = proxy_data['data']['host']
+        proxy_port = proxy_data['data']['port']
         return proxy_ip, proxy_port
     elif status_proxyv6 =='SUCCESS':
         proxy_data = new_proxyv6
         #proxy_ip_v6 = str(proxy_data['data']['host']) + ':' + str(proxy_data['data']['port'])
         #return proxy_ip_v6
-        proxy_ip = str(proxy_data['data']['host'])
-        proxy_port = str(proxy_data['data']['port'])
+        proxy_ip = proxy_data['data']['host']
+        proxy_port = proxy_data['data']['port']
         return proxy_ip, proxy_port
 
 def get_current_proxyv6():
@@ -87,9 +87,7 @@ class Spider1Spider(scrapy.Spider):
         user_agent = get_user_agent()
         print('=============================================')
         print(user_agent)
-        #proxy_ip, proxy_port = get_new_proxyv6()
-        proxy_ip =""
-        proxy_port=""
+        proxy_ip, proxy_port = get_new_proxyv6()
         print('=============================================')
         print(proxy_ip+':'+proxy_port)
         #email = email_gen()
