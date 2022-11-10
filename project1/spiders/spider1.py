@@ -89,7 +89,7 @@ class Spider1Spider(scrapy.Spider):
         print(user_agent)
         proxy_ip, proxy_port = get_new_proxyv6()
         print('=============================================')
-        print(proxy_ip+':'+proxy_port)
+        #print(proxy_ip+':'+proxy_port)
         #email = email_gen()
         email ='tvhrstd_shepardsen_1666071185@tfbnw.net'
         yield SplashRequest(url='https://m.facebook.com//login/identify/?ctx=recover&c=%2Flogin%2F&search_attempts=1&alternate_search=0&show_friend_search_filtered_list=0&birth_month_search=0&city_search=0',callback=self.parse, endpoint='execute',args={
