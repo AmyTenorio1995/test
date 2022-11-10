@@ -24,14 +24,14 @@ def get_new_proxyv6():
         #return proxy_ip_v6
         proxy_ip = str(proxy_data['data']['host'])
         proxy_port = str(proxy_data['data']['port'])
-        return str(proxy_ip), str(proxy_port)
+        return proxy_ip, proxy_port
     elif status_proxyv6 =='SUCCESS':
         proxy_data = new_proxyv6
         #proxy_ip_v6 = str(proxy_data['data']['host']) + ':' + str(proxy_data['data']['port'])
         #return proxy_ip_v6
         proxy_ip = str(proxy_data['data']['host'])
         proxy_port = str(proxy_data['data']['port'])
-        return str(proxy_ip), str(proxy_port)
+        return proxy_ip, proxy_port
 
 def get_current_proxyv6():
     r = requests.get(f'https://api.proxyv6.net/key/get-current-ip?api_key_rotating={proxyv6_API_key}')
