@@ -87,7 +87,9 @@ class Spider1Spider(scrapy.Spider):
         user_agent = get_user_agent()
         print('=============================================')
         print(user_agent)
-        proxy_ip, proxy_port = get_new_proxyv6()
+        #proxy_ip, proxy_port = get_new_proxyv6()
+        proxy_ip =""
+        proxy_port=""
         print('=============================================')
         print(proxy_ip+':'+proxy_port)
         #email = email_gen()
